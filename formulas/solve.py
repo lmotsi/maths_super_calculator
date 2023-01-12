@@ -19,7 +19,7 @@ def split_equation(equation):
 def solve(equation):
     print(equation)
     if len(equation) == 1:
-        return equation[0]
+        return int(equation[0]) if float(equation[0]).is_integer() else float(equation[0]) 
     elif type(equation)==str:
         return equation
     else:
@@ -52,5 +52,5 @@ def solve(equation):
                         return solve(equation)
                     except:
                         return equation[0]
-equation = split_equation("6*8+5+9-7/2")
+equation = split_equation("9+8")
 print(solve(equation))
